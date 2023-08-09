@@ -30,12 +30,12 @@
     <description>Nacos Spring Boot Parent</description>
 
     <properties>
-        <java.version>17</java.version>
-        <java.source.version>17</java.source.version>
-        <java.target.version>17</java.target.version>
+        <java.version>1.8</java.version>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>3.0.6</spring-boot.version>
+        <spring-boot.version>2.6.3</spring-boot.version>
         <nacos-spring-context.version>2.1.0</nacos-spring-context.version>
         <!-- Build args -->
         <argline>-server -Xms256m -Xmx512m -XX:PermSize=64m -XX:MaxPermSize=128m -Dfile.encoding=UTF-8
