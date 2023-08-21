@@ -17,12 +17,21 @@
 
 package com.alibaba.boot.nacos.logging;
 
+import com.alibaba.boot.nacos.config.autoconfigure.NacosConfigAutoConfiguration;
 import com.alibaba.boot.nacos.config.logging.NacosLoggingListener;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ConfigurableBootstrapContext;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.ResolvableType;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.lang.reflect.Type;
 
@@ -33,9 +42,8 @@ import java.lang.reflect.Type;
  * @Date: 2022/8/12 15:08
  */
 public class NacosLoggingListenerTest {
-    @Autowired
-    NacosLoggingListener nacosLoggingListener;
-    
+    private NacosLoggingListener nacosLoggingListener;
+
     @Before
     public void setup() {
         nacosLoggingListener = new NacosLoggingListener();

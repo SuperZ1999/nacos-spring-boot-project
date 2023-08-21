@@ -19,6 +19,7 @@ package com.alibaba.boot.nacos.autoconfigure;
 
 import com.alibaba.boot.nacos.config.autoconfigure.NacosConfigAutoConfiguration;
 import com.alibaba.boot.nacos.config.autoconfigure.NacosConfigBootBeanDefinitionRegistrar;
+import com.alibaba.boot.nacos.config.binder.NacosBootConfigurationPropertiesBinder;
 import com.alibaba.nacos.client.utils.LogUtils;
 import org.junit.Assert;
 import org.junit.Before;
@@ -57,8 +58,9 @@ public class NacosConfigBootBeanDefinitionRegistrarTest {
         try {
             BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition("beanName");
             Assert.assertNotNull(builder);
-            BeanFactory beanFactory = new DefaultListableBeanFactory();
+            DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
             nacosConfigBootBeanDefinitionRegistrar.setBeanFactory(beanFactory);
+            Assert.assertNotNull(beanFactory.getBeanDefinition(NacosBootConfigurationPropertiesBinder.BEAN_NAME));
         }catch (Exception e) {
             LOGGER.error("error info: {}",e.toString());
             Assert.assertNull(e);
