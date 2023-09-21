@@ -12,6 +12,11 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+/**
+ * @ClassName: NacosConfigPropertiesUtilsTest
+ * @Author: SuperZ1999
+ * @Date: 2023/8/21
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = { NacosConfigAutoConfiguration.class })
 @TestPropertySource(properties = {

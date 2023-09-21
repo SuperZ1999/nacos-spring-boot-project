@@ -4,6 +4,11 @@ import com.alibaba.boot.nacos.config.util.editor.NacosCustomBooleanEditor;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * @ClassName: NacosCustomBooleanEditorTest
+ * @Author: SuperZ1999
+ * @Date: 2023/8/21
+ */
 public class NacosCustomBooleanEditorTest {
     @Test
     public void testAllowEmpty() {
